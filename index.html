@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8313パスワードジェネレーター</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="background"></div>
+    <div class="container">
+        <h1>8313パスワードジェネレーター</h1>
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> 大文字</label>
+            <label><input type="checkbox" id="lowercase" checked> 小文字</label>
+            <label><input type="checkbox" id="numbers" checked> 数字</label>
+            <label><input type="checkbox" id="symbols"> 特殊文字</label>
+        </div>
+        <div class="length-container">
+            <label for="length">パスワードの長さ: <span id="lengthValue">12</span></label>
+            <input type="range" id="length" min="4" max="32" value="12">
+        </div>
+        <button id="generatePassword">パスワードを生成</button>
+        <div id="password" class="password-display"></div>
+        <div class="additional-options">
+            <button id="copyPassword">コピー</button>
+            <button id="savePassword">パスワードをメモ</button>
+            <button id="downloadCSV">CSVダウンロード</button>
+        </div>
+        <div id="strengthMeter" class="strength-meter">
+            <div class="meter-bar"></div>
+            <span class="strength-label">パスワード強度: <span id="strengthValue">弱い</span></span>
+        </div>
+        <div id="savedPasswords" class="saved-passwords">
+            <h2>保存されたメモ</h2>
+            <ul></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
